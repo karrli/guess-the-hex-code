@@ -1,0 +1,63 @@
+
+/* Styles go here */
+.container-align {
+  /* height: 800px; */
+  background-color: lightblue;
+}
+
+/* col-height {
+  height: 750px;
+} */
+/* .border
+{
+  border:2px solid;       
+} */
+body{
+  background-color: lightblue;
+}
+.row-alto{
+  height: 600px;
+}
+.circle-modified {
+  background: pink;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+#one {
+  animation: mymove1 6s infinite;
+  position: relative;
+}
+
+@keyframes mymove1 {
+  0%   {top: 0px;}
+  50%  {top: 200px;}
+  45%  {top: 50px}
+  100% {top: 100px;}
+}
+
+#two{
+  position: relative;
+  animation: mymove2 4s infinite;
+}
+
+@keyframes mymove2 {
+  0%   {top: 0px;}
+  25%  {top: 200px;}
+  75%  {top: 50px}
+  100% {top: 100px;}
+}
+
+#three {
+  position: relative;
+  animation: mymove3 7s infinite;
+}
+@keyframes mymove3 {
+  0%   {top: 0px;}
+  20%  {top: 100px;}
+  75%  {top: 25px}
+  100% {top: 50px;}
+ 
+ 
+}
