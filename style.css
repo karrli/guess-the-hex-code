@@ -1,19 +1,46 @@
-
-/* Styles go here */
-.container-align {
-  /* height: 800px; */
-  background-color: lightblue;
+body{
+  background-color: ivory;
 }
 
-/* col-height {
-  height: 750px;
-} */
-/* .border
-{
-  border:2px solid;       
-} */
-body{
-  background-color: lightblue;
+.navbar-custom {
+   background-color: rgb(231, 251, 231);
+  
+}
+.container-align {
+    background-color: ivory;
+    
+}
+
+h1{
+  text-align: center;
+  margin-top: 40px;
+}
+.Hex, .results {
+  width:100%;
+  display: flex;
+  margin: 25px 0px;
+}
+
+.Hex{
+  justify-content: center;
+}
+
+.Hex h2 {
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(58, 57, 57);
+}
+
+
+.results{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results h2{
+  font-size: 40px;
+  color:  rgb(58, 57, 57);
 }
 .row-alto{
   height: 600px;

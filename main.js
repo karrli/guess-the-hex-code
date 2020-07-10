@@ -1,7 +1,6 @@
 (function(){
 "use strict"
-// var divs = document.querySelectorAll('.circle-modified')
-// divs.innerHTML = ''
+
 
 // 1. Generamos 3 HEX codes aleatorios
 function getHexCodes(){
@@ -19,63 +18,64 @@ function getHexCodes(){
         hexCodes.push(hex);
     }
 
-    console.log(hexCodes)
+    // console.log(hexCodes)
+    // console.log(hexCodes[0])
 
 // 2. Elegimos al Hex correcto
-var correctRandomHex = hexCodes[ Math.floor(Math.random() * hexCodes.length ) ]
+var correctRandomHex =  hexCodes[0]
     console.log(correctRandomHex)
+// 3. Elegimos a los Hex incorrectos
+var incorrectRandomHex =  hexCodes[1] 
+    console.log(incorrectRandomHex)
+var incorrectRandomHex2 = hexCodes[2] 
+    console.log(incorrectRandomHex2)
 
 //4. Poner el Hex correcto en la etiqueta hexCode
     var hexText = document.getElementById('hex-code')
     hexText.innerHTML = correctRandomHex
 
-//   6.- Borrar los datos por default en correcto, 
+//   5.- Borrar los datos por default en correcto, 
   var selected = document.getElementById('answer');
   selected.innerHTML = ''
 
-//   for(var i=0; i< hexCodes.length; i++){ 
+//6. Mostrar los tres Hex aleatorios y etiquetas
+var correctColor = Math.floor(Math.random()*hexCodes.length);
+console.log(correctColor)
 
-//   if (correctRandomHex === hexCodes[i] ) {
-//     document.getElementById("one").style.backgroundColor = correctRandomHex;
-//     document.getElementById("two").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("three").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("one").addEventListener("click", function() {alert("Correct!")});
-//     document.getElementById("two").addEventListener("click", function() {alert("Incorrect!")});
-//     document.getElementById("three").addEventListener("click", function() {alert("Incorrect!")});
-// }
-
-// else if (correctRandomHex === hexCodes[i] ){ 
-//     document.getElementById("second").style.backgroundColor = correctRandomHex;
-//     document.getElementById("one").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("three").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("second").addEventListener("click", function() {alert("Correct!")});
-//     document.getElementById("one").addEventListener("click", function() {alert("Incorrect!")});
-//     document.getElementById("three").addEventListener("click", function() {alert("Incorrect!")});
-// }
-
-// else {
-//     document.getElementById("three").style.backgroundColor = correctRandomHex;
-//     document.getElementById("one").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("two").style.backgroundColor = incorrectRandomHex;
-//     document.getElementById("three").addEventListener("click", function() {alert("Correct!")});
-//     document.getElementById("one").addEventListener("click", function() {alert("Incorrect!")});
-//     document.getElementById("two").addEventListener("click", function() {alert("Incorrect!")});
-
-// }
-//   }
-//2. Mostrar los tres Hex aleatorios 
-for(var i=0; i< hexCodes.length; i++){ 
-
-var background = document.getElementById("one ").style.backgroundColor
-    // document.getElementById("one").style.backgroundColor = hexCodes[i];
-    // document.getElementById("two").style.backgroundColor = hexCodes[i-1];
-    // document.getElementById("three").style.backgroundColor = hexCodes[i-2];
-    // var circulos = document.createElement('div');
-    // circulos.className = "circle";
-    // document.querySelectorAll(".circle").style.backgroundColor=hexCodes[i]
-    
+if (correctColor === 0) { 
+    document.getElementById("one").style.backgroundColor = correctRandomHex
+    document.getElementById("two").style.backgroundColor = incorrectRandomHex
+    document.getElementById("three").style.backgroundColor = incorrectRandomHex2
+    document.getElementById("one").addEventListener("click", function() {answer.innerHTML = "Yes!"});
+    document.getElementById("two").addEventListener("click", function() {answer.innerHTML = "Oh :("});
+    document.getElementById("three").addEventListener("click", function() {answer.innerHTML = "Oh :("});
 
 }
+else if (correctColor === 1 ){ 
+    document.getElementById("two").style.backgroundColor = correctRandomHex;
+    document.getElementById("one").style.backgroundColor = incorrectRandomHex;
+    document.getElementById("three").style.backgroundColor = incorrectRandomHex2;
+    document.getElementById("two").addEventListener("click", function() {answer.innerHTML = "Yes!"});
+    document.getElementById("one").addEventListener("click", function() {answer.innerHTML = "Oh :("});
+    document.getElementById("three").addEventListener("click", function() {answer.innerHTML = "Oh :("});
+}
+else {
+    document.getElementById("three").style.backgroundColor = correctRandomHex;
+    document.getElementById("one").style.backgroundColor = incorrectRandomHex;
+    document.getElementById("two").style.backgroundColor = incorrectRandomHex2;
+    document.getElementById("three").addEventListener("click", function() {answer.innerHTML = "Yes!"});
+    document.getElementById("one").addEventListener("click", function() {answer.innerHTML = "Oh :("});
+    document.getElementById("two").addEventListener("click", function() {answer.innerHTML = "Oh :("});
+}
+
+// // document.getElementsByClassName("circle").style.background=color
+// var x, l, i;
+// x = document.getElementsByClassName("circle circle-modified");
+// l = x.length;
+// for (i = 0; i < l; i++) {
+    
+//     document.getElementById("one").style.backgroundColor = hexCodes[i]
+
 
 
 })();
