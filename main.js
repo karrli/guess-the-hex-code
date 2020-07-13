@@ -4,7 +4,15 @@
 
 // 1. Generamos 3 HEX codes aleatorios
 function getHexCodes(){
-    var random = '#' + Math.floor(Math.random() * 16777215).toString(16)
+    var letters = "0123456789ABCDEF"; 
+  
+    // html color code starts with # 
+    var random = '#'; 
+  
+    // generating 6 times as HTML color code consist 
+    // of 6 letter or digits 
+    for (var i = 0; i < 6; i++) 
+       random += letters[(Math.floor(Math.random() * 16))];
     console.log("Hex Code:",random)
     return random;
 }

@@ -6,6 +6,9 @@ body{
    background-color: rgb(231, 251, 231);
   
 }
+.fa-refresh{
+  color: rgb(131, 130, 130);
+}
 .container-align {
     background-color: ivory;
     
@@ -14,6 +17,13 @@ body{
 h1{
   text-align: center;
   margin-top: 40px;
+  color: azure;
+  }
+.custom-container{
+  width:fit-content;
+  border-radius: 20px;
+  
+  background-color: rgb(58, 57, 57);
 }
 .Hex, .results {
   width:100%;
@@ -28,7 +38,9 @@ h1{
 .Hex h2 {
   font-size: 45px;
   font-weight: bold;
-  color: rgb(58, 57, 57);
+  color: azure;
+  background-color: rgb(58, 57, 57);
+  border-radius: 10px;
 }
 
 
